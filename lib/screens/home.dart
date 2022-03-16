@@ -1,4 +1,8 @@
-import 'package:assignment2/reusable_text.dart';
+import 'package:assignment2/screens/tabs/future.dart';
+import 'package:assignment2/screens/tabs/monthly.dart';
+import 'package:assignment2/screens/tabs/today.dart';
+import 'package:assignment2/screens/tabs/yearly.dart';
+import 'package:assignment2/widgets/reusable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
@@ -7,11 +11,12 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[100],
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+    return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        backgroundColor: Colors.grey[100],
+        body: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 50, 20, 0),
           child: Column(
             children: [
               Row(
@@ -34,12 +39,14 @@ class Home extends StatelessWidget {
                         text: 'Welcome back, Marvin',
                         colour: Colors.black,
                         size: 20.0,
+                        weight: FontWeight.bold,
                       ),
                       SizedBox(height: 8.0),
                       ReusableText(
                         text: 'Your financial situation is looking good!',
-                        colour: Color(0xffcbd3d6),
+                        colour: Color(0xffacb3b5),
                         size: 12.0,
+                        weight: FontWeight.normal,
                       )
                     ],
                   ),
@@ -69,14 +76,36 @@ class Home extends StatelessWidget {
                   children: const [
                     ReusableText(
                       text: 'Beginner Level',
-                      colour: Color(0xffcbd3d6),
+                      colour: Color(0xffacb3b5),
                       size: 14.0,
+                      weight: FontWeight.normal,
                     ),
                     ReusableText(
                       text: 'XP 380/500',
-                      colour: Color(0xffcbd3d6),
+                      colour: Colors.black,
                       size: 14.0,
+                      weight: FontWeight.normal,
                     ),
+                  ],
+                ),
+              ),
+              const TabBar(
+                labelColor: Colors.black,
+                indicatorColor: Colors.red,
+                tabs: [
+                  Tab(text: 'Today'),
+                  Tab(text: 'Monthly'),
+                  Tab(text: 'Yearly'),
+                  Tab(text: 'future'),
+                ],
+              ),
+              const Expanded(
+                child: TabBarView(
+                  children: [
+                    Today(),
+                    Monthly(),
+                    Yearly(),
+                    Future(),
                   ],
                 ),
               ),
