@@ -17,18 +17,19 @@ class ReusableCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180.0,
+      // height: 180.0,
       decoration: BoxDecoration(
         color: colour,
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.fromLTRB(10, 15, 10, 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: const [
                 CircleAvatar(
                   backgroundImage: AssetImage('images/card.png'),
@@ -41,27 +42,29 @@ class ReusableCard extends StatelessWidget {
                   size: 18.0,
                   weight: FontWeight.normal,
                 ),
-                SizedBox(width: 40.0),
-                ReusableText(
-                  text: '09-06-2018',
-                  colour: Colors.white,
-                  size: 15.0,
-                  weight: FontWeight.normal,
+                Padding(
+                  padding: EdgeInsets.only(left: 25.0),
+                  child: ReusableText(
+                    text: '09-06-2018',
+                    colour: Colors.white,
+                    size: 15.0,
+                    weight: FontWeight.normal,
+                  ),
                 )
               ],
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 50.0),
+              padding: EdgeInsets.only(left: 50.0, right: 10.0),
               child: ReusableText(
                 text:
-                    'Last month, you made 42 transactions less than \$5. Spending a total of\$147.Want to cut down on frivilious spending?',
+                    'Last month, you made 42 transactions \nless than \$5. Spending a total of \$147. Want to cut down on frivilious spending?',
                 colour: Colors.white,
                 size: 15.0,
                 weight: FontWeight.normal,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(45, 8, 0, 0),
+              padding: const EdgeInsets.fromLTRB(45, 8, 20, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
