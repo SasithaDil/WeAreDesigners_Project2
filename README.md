@@ -8,14 +8,15 @@
 <td> 
  ## Android 
 
+
 <tr><td>
 
 
-<img width="233" alt="Screen Shot - iPhone 13 Pro Max - 2022-03-16 at 23 53 26" src="https://user-images.githubusercontent.com/33307043/158661258-84da2f8c-6bbd-4a8c-9843-e2e8323edfde.png">
+<img width="233" alt="Screen Shot - iPhone 13 Pro Max - 2022-03-16 at 23 53 26" src="https://user-images.githubusercontent.com/33307043/158732420-b054e5a5-0aea-4c77-b3e1-f69033e3827a.png">
 
  <br> <br> 
 
-https://user-images.githubusercontent.com/33307043/158662542-6cf3f57b-ba11-4646-96b8-edd475b7043c.mov
+https://user-images.githubusercontent.com/33307043/158732481-cbb20587-808e-4d6f-ae62-8b9b9fecd8f4.mov
 
   
 <td>
