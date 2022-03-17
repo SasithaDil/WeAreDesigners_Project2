@@ -44,7 +44,7 @@ class ReusableCard extends StatelessWidget {
                   weight: FontWeight.normal,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 25.0),
+                  padding: EdgeInsets.only(left: 12.0),
                   child: ReusableText(
                     text: '09-06-2018',
                     colour: Colors.white,
