@@ -1,5 +1,11 @@
 # Task -2
 
+## Instructions
+
+ 1. Clone the repository
+ 2. Get dependencies (pub get)
+ 3. Run/Debug app
+
 <table>
 <tr>
 <td> 
