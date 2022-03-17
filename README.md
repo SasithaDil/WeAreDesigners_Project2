@@ -12,7 +12,7 @@
 <tr><td>
 
 
-<img width="233" alt="Screen Shot - iPhone 13 Pro Max - 2022-03-16 at 23 53 26" src="https://user-images.githubusercontent.com/33307043/158732420-b054e5a5-0aea-4c77-b3e1-f69033e3827a.png">
+<img width="233" alt="Screen Shot - iPhone 13 Pro Max - 2022-03-16 at 23 53 26" src="https://user-images.githubusercontent.com/33307043/158735806-0870506c-ccea-4714-86f7-74d7884b9403.png">
 
  <br> <br> 
 
@@ -23,7 +23,7 @@ https://user-images.githubusercontent.com/33307043/158732481-cbb20587-808e-4d6f-
 
 
   
-<img width="233" alt="Screen Shot - Samsung Galaxy A03S - 2022-03-16 at 23 53 26" src="https://user-images.githubusercontent.com/33307043/158735267-df7d5e73-389c-49c6-b318-24fe6d45c5ee.jpg">
+<img width="233" alt="Screen Shot - Samsung Galaxy A03S - 2022-03-16 at 23 53 26" src="https://user-images.githubusercontent.com/33307043/158735861-cbaad308-a6bf-45b1-a96b-e46cb5dc05c0.jpg">
  
   <br> <br> 
  
