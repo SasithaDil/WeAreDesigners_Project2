@@ -15,11 +15,11 @@ class Home extends StatelessWidget {
       length: 4,
       child: Scaffold(
         backgroundColor: Colors.grey[100],
-        body: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 50, 20, 0),
-          child: Column(
-            children: [
-              Row(
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 50, 20, 0),
+              child: Row(
                 children: [
                   CircleAvatar(
                     backgroundColor: Colors.white,
@@ -35,6 +35,7 @@ class Home extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       SizedBox(height: 8.0),
+                      //Reuseble text is a widget that extract for future usage and simplyfy the code
                       ReusableText(
                         text: 'Welcome back, Marvin',
                         colour: Colors.black,
@@ -61,56 +62,59 @@ class Home extends StatelessWidget {
                   )
                 ],
               ),
-              const SizedBox(height: 20.0),
-              LinearPercentIndicator(
+            ),
+            const SizedBox(height: 20.0),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: LinearPercentIndicator(
                 lineHeight: 13.0,
                 percent: 0.67,
                 backgroundColor: Colors.grey[300],
                 progressColor: Colors.blue[600],
               ),
-              const SizedBox(height: 5.0),
-              Padding(
-                padding: const EdgeInsets.only(left: 5.0, right: 5.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    ReusableText(
-                      text: 'Beginner Level',
-                      colour: Color(0xffacb3b5),
-                      size: 14.0,
-                      weight: FontWeight.normal,
-                    ),
-                    ReusableText(
-                      text: 'XP 380/500',
-                      colour: Colors.black,
-                      size: 14.0,
-                      weight: FontWeight.normal,
-                    ),
-                  ],
-                ),
-              ),
-              const TabBar(
-                labelColor: Colors.black,
-                indicatorColor: Colors.red,
-                tabs: [
-                  Tab(text: 'Today'),
-                  Tab(text: 'Monthly'),
-                  Tab(text: 'Yearly'),
-                  Tab(text: 'future'),
+            ),
+            const SizedBox(height: 5.0),
+            Padding(
+              padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  ReusableText(
+                    text: 'Beginner Level',
+                    colour: Color(0xffacb3b5),
+                    size: 14.0,
+                    weight: FontWeight.normal,
+                  ),
+                  ReusableText(
+                    text: 'XP 380/500',
+                    colour: Colors.black,
+                    size: 14.0,
+                    weight: FontWeight.normal,
+                  ),
                 ],
               ),
-              const Expanded(
-                child: TabBarView(
-                  children: [
-                    Today(),
-                    Monthly(),
-                    Yearly(),
-                    Future(),
-                  ],
-                ),
+            ),
+            const TabBar(
+              labelColor: Colors.black,
+              indicatorColor: Colors.red,
+              tabs: [
+                Tab(text: 'Today'),
+                Tab(text: 'Monthly'),
+                Tab(text: 'Yearly'),
+                Tab(text: 'Future'),
+              ],
+            ),
+            const Expanded(
+              child: TabBarView(
+                children: [
+                  Today(),
+                  Monthly(),
+                  Yearly(),
+                  Future(),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

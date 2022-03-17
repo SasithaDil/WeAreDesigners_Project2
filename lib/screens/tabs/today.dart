@@ -15,55 +15,64 @@ class _TodayState extends State<Today> {
   bool isFavourite3 = false;
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      shrinkWrap: true,
-      scrollDirection: Axis.vertical,
-      children: [
-        ReusableCard(
-          colour: const Color(0xff468cfc),
-          visibility: !isFavourite,
-          icon: isFavourite ? Icons.favorite : Icons.favorite_border,
-          tapIconButton: () {
-            setState(() {
-              // print('tap');
-              isFavourite = true;
-            });
-          },
+    return Scaffold(
+      backgroundColor: Colors.grey[300],
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+        child: ListView(
+          shrinkWrap: true,
+          scrollDirection: Axis.vertical,
+          children: [
+            //Reusabe card is a customised Card widget that used for simpyfy the code and reuse
+            ReusableCard(
+              colour: const Color(0xff468cfc),
+              visibility: !isFavourite,
+              icon: isFavourite ? Icons.favorite : Icons.favorite_border,
+              tapIconButton: () {
+                setState(() {
+                  // print('tap');
+
+                  //isFavourite == true ? true : false;
+                  isFavourite = true;
+                });
+              },
+            ),
+            const SizedBox(height: 15.0),
+            ReusableCard(
+              colour: const Color(0xff51d1c2),
+              visibility: !isFavourite1,
+              icon: isFavourite1 ? Icons.favorite : Icons.favorite_border,
+              tapIconButton: () {
+                setState(() {
+                  isFavourite1 = true;
+                });
+              },
+            ),
+            const SizedBox(height: 15.0),
+            ReusableCard(
+              colour: const Color(0xff5a69ca),
+              visibility: !isFavourite2,
+              icon: isFavourite2 ? Icons.favorite : Icons.favorite_border,
+              tapIconButton: () {
+                setState(() {
+                  isFavourite2 = true;
+                });
+              },
+            ),
+            const SizedBox(height: 15.0),
+            ReusableCard(
+              colour: const Color(0xfffe86a8),
+              visibility: !isFavourite3,
+              icon: isFavourite3 ? Icons.favorite : Icons.favorite_border,
+              tapIconButton: () {
+                setState(() {
+                  isFavourite3 = true;
+                });
+              },
+            ),
+          ],
         ),
-        const SizedBox(height: 15.0),
-        ReusableCard(
-          colour: const Color(0xff51d1c2),
-          visibility: !isFavourite1,
-          icon: isFavourite1 ? Icons.favorite : Icons.favorite_border,
-          tapIconButton: () {
-            setState(() {
-              isFavourite1 = true;
-            });
-          },
-        ),
-        const SizedBox(height: 15.0),
-        ReusableCard(
-          colour: const Color(0xff5a69ca),
-          visibility: !isFavourite2,
-          icon: isFavourite2 ? Icons.favorite : Icons.favorite_border,
-          tapIconButton: () {
-            setState(() {
-              isFavourite2 = true;
-            });
-          },
-        ),
-        const SizedBox(height: 15.0),
-        ReusableCard(
-          colour: const Color(0xfffe86a8),
-          visibility: !isFavourite3,
-          icon: isFavourite3 ? Icons.favorite : Icons.favorite_border,
-          tapIconButton: () {
-            setState(() {
-              isFavourite3 = true;
-            });
-          },
-        ),
-      ],
+      ),
     );
   }
 }

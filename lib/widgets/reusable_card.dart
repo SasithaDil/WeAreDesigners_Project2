@@ -32,6 +32,7 @@ class ReusableCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: const [
                 CircleAvatar(
+                  backgroundColor: Color(0xff61A4BC),
                   backgroundImage: AssetImage('images/card.png'),
                   radius: 20.0,
                 ),
@@ -69,6 +70,7 @@ class ReusableCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
+                    //Can add an action to the on tap function
                     onTap: () {},
                     child: Visibility(
                       visible: visibility,
