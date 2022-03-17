@@ -6,6 +6,12 @@
  2. Get dependencies (pub get)
  3. Run/Debug app
 
+### Versions
+
+Flutter SDK - Channel stable, 2.10.2
+Xcode - 13.2.1
+Android SDK version - 29.0.3
+
 <table>
 <tr>
 <td> 
